@@ -139,6 +139,86 @@ The project follows a medallion-style architecture:
     <td>Provide interactive AI and data exploration interfaces</td>
   </tr>
 </table>
+
+<table>
+<tr>
+<td>
+
+
+## ☁️ AWS ↔ Snowflake Integration
+
+The project uses a Snowflake storage integration to securely connect Amazon S3 with Snowflake without storing AWS access keys directly in Snowflake.
+
+The configuration includes:
+
+- Amazon S3 bucket
+- AWS IAM policy
+- AWS IAM role
+- Snowflake storage integration
+- External stage
+- `COPY INTO` for loading raw data
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td>
+
+## 🧱 dbt Transformation Layer
+
+dbt transforms the raw Snowflake data into structured, analytics-ready models.
+
+The transformation layer includes:
+
+- Staging models
+- Dimension tables
+- Fact tables
+- Incremental models
+- Business marts
+- Data quality tests
+
+The project follows a medallion-style approach:
+
+**RAW → STAGING → MARTS**
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td>
+
+## 🔄 Apache Airflow
+
+Apache Airflow is used to orchestrate the end-to-end data pipeline.
+
+The main workflow is:
+
+```text
+S3 → Snowflake → dbt → AI Enrichment → AI Mart
+<table>
+<tr>
+<td>
+
+## 🤖 AI Layer
+
+The AI layer adds intelligent capabilities on top of the data warehouse.
+
+It includes:
+
+- **LLM Review Enrichment** — extracts structured insights such as sentiment and topics from customer reviews.
+- **RAG** — enables conversational interaction with review data using retrieval-augmented generation.
+- **Text-to-SQL** — allows users to query the analytical warehouse using natural language.
+
+The AI applications are built using Python, OpenAI, and Streamlit.
+
+</td>
+</tr>
+</table>
+
 ### Pipeline
 
 ```text
@@ -169,3 +249,5 @@ The project follows a medallion-style architecture:
               ┌──────────────┼──────────────┐
               ▼              ▼              ▼
         Review Enrichment    RAG       Text-to-SQL
+
+
