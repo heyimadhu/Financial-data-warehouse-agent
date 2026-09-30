@@ -144,7 +144,6 @@ The project follows a medallion-style architecture:
 <tr>
 <td>
 
-
 ## ☁️ AWS ↔ Snowflake Integration
 
 The project uses a Snowflake storage integration to securely connect Amazon S3 with Snowflake without storing AWS access keys directly in Snowflake.
@@ -197,8 +196,14 @@ Apache Airflow is used to orchestrate the end-to-end data pipeline.
 
 The main workflow is:
 
-```text
-S3 → Snowflake → dbt → AI Enrichment → AI Mart
+**S3 → Snowflake → dbt → AI Enrichment → AI Mart**
+
+The pipeline coordinates data loading, transformation, AI enrichment, and downstream analytical modeling.
+
+</td>
+</tr>
+</table>
+
 <table>
 <tr>
 <td>
@@ -219,7 +224,9 @@ The AI applications are built using Python, OpenAI, and Streamlit.
 </tr>
 </table>
 
-### Pipeline
+---
+
+## 🔄 Data Engineering Pipeline
 
 ```text
                     Food Delivery Dataset
@@ -249,5 +256,4 @@ The AI applications are built using Python, OpenAI, and Streamlit.
               ┌──────────────┼──────────────┐
               ▼              ▼              ▼
         Review Enrichment    RAG       Text-to-SQL
-
-
+```
