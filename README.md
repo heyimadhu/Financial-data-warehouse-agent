@@ -32,9 +32,7 @@ The project follows a medallion-style architecture:
 
 ---
 
-## 🏗️ Architecture
 
-![Architecture](docs/architecture.png)
 
 ### Pipeline
 
