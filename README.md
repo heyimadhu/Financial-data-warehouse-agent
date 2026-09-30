@@ -32,7 +32,62 @@ The project follows a medallion-style architecture:
 
 ---
 
+## ⚙️ Technology Stack
 
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Technologies</th>
+  </tr>
+  <tr>
+    <td><strong>Programming</strong></td>
+    <td>Python, SQL</td>
+  </tr>
+  <tr>
+    <td><strong>Data Processing</strong></td>
+    <td>Pandas</td>
+  </tr>
+  <tr>
+    <td><strong>Cloud Storage</strong></td>
+    <td>Amazon S3</td>
+  </tr>
+  <tr>
+    <td><strong>Data Warehouse</strong></td>
+    <td>Snowflake</td>
+  </tr>
+  <tr>
+    <td><strong>Transformation</strong></td>
+    <td>dbt / dbt-snowflake</td>
+  </tr>
+  <tr>
+    <td><strong>Orchestration</strong></td>
+    <td>Apache Airflow</td>
+  </tr>
+  <tr>
+    <td><strong>Containers</strong></td>
+    <td>Docker</td>
+  </tr>
+  <tr>
+    <td><strong>AI / LLM</strong></td>
+    <td>OpenAI</td>
+  </tr>
+  <tr>
+    <td><strong>Embeddings</strong></td>
+    <td><code>text-embedding-3-small</code></td>
+  </tr>
+  <tr>
+    <td><strong>LLM</strong></td>
+    <td><code>gpt-4o-mini</code></td>
+  </tr>
+  <tr>
+    <td><strong>Application Layer</strong></td>
+    <td>Streamlit</td>
+  </tr>
+  <tr>
+    <td><strong>Version Control</strong></td>
+    <td>Git / GitHub</td>
+  </tr>
+</table>
 
 ### Pipeline
 
