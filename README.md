@@ -89,6 +89,56 @@ The project follows a medallion-style architecture:
   </tr>
 </table>
 
+
+## 🔄 Data Engineering Pipeline
+
+<table>
+  <tr>
+    <th>Stage</th>
+    <th>Technology</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td><strong>1. Data Source</strong></td>
+    <td>CSV / Zomato Dataset</td>
+    <td>Raw restaurant, customer, food, order, and review data</td>
+  </tr>
+  <tr>
+    <td><strong>2. Data Lake</strong></td>
+    <td>Amazon S3</td>
+    <td>Store raw datasets in the cloud</td>
+  </tr>
+  <tr>
+    <td><strong>3. Data Warehouse</strong></td>
+    <td>Snowflake</td>
+    <td>Load and store structured raw data</td>
+  </tr>
+  <tr>
+    <td><strong>4. Transformation</strong></td>
+    <td>dbt</td>
+    <td>Clean, transform, test, and model the data</td>
+  </tr>
+  <tr>
+    <td><strong>5. Data Modeling</strong></td>
+    <td>dbt</td>
+    <td>Build dimensions, facts, and analytical marts</td>
+  </tr>
+  <tr>
+    <td><strong>6. Orchestration</strong></td>
+    <td>Apache Airflow</td>
+    <td>Automate and schedule the complete pipeline</td>
+  </tr>
+  <tr>
+    <td><strong>7. AI Processing</strong></td>
+    <td>OpenAI</td>
+    <td>Review enrichment, RAG, and text-to-SQL</td>
+  </tr>
+  <tr>
+    <td><strong>8. Applications</strong></td>
+    <td>Streamlit</td>
+    <td>Provide interactive AI and data exploration interfaces</td>
+  </tr>
+</table>
 ### Pipeline
 
 ```text
